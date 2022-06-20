@@ -1,34 +1,13 @@
 
 
-const body = document.body;
-const list = body.firstElementChild;
-const firstListItem = list.nextElementSibling;
-const listItems = firstListItem.firstElementChild;
+const  item = document.querySelectorAll('.item')
+console.log(item);
 
-const Item = firstListItem.children;
-console.log(`Number of categories:`,Item.length)
-const title = listItems.firstElementChild;
-console.log(`Categories:`, title.textContent);
+console.log(`Number of categories:`, item.length)
+const title = item.firstElementChild;
+const elements= item.lastElementChild
 
-const listElements = listItems.lastElementChild;
+item.forEach(function (title, elements) {
+  console.log(`Categories:' ${title}}, 'Elements:' ${elements.length}`);
+});
 
-const elements = listElements.children;
-console.log(`Elements:`, elements.length);
-
-const SecondChild = listItems.nextElementSibling;
-
-const SecondChildElement= SecondChild.firstElementChild
-console.log(`Categories:`, SecondChildElement.textContent);
-
-const secondChildItem = SecondChildElement.nextElementSibling;
-
-const Second = secondChildItem.children;
-console.log(`Elements:`,Second.length)
-
-const ThirdChild = SecondChild.nextElementSibling;
-const ThirdChildElement = ThirdChild.firstElementChild;
-console.log(`Categories:`, ThirdChildElement.textContent);
-
-const ThirdChildItem = ThirdChildElement.nextElementSibling;
-const Third= ThirdChildItem.children
-console.log(`Elements:`,Third.length)

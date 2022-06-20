@@ -11,8 +11,8 @@ const ingredients = [
 
 const ulItemEl = document.querySelector(`ul`)
 console.log(ulItemEl)
-const Elements = ingredients.map((ingredients) => ` <li class= "item">${ingredients} </li>`).join("");
-console.log(Elements);
-ulItemEl.innerHTML = Elements;
+const Elements = ingredients.map((ingredients) => createElement("li"));
+console.log(Elements); 
+ulItemEl.appendChild = Elements;
 
 
