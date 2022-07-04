@@ -11,8 +11,11 @@ const ingredients = [
 
 const ulItemEl = document.querySelector(`ul`)
 console.log(ulItemEl)
-const Elements = ingredients.map((ingredients) => createElement("li"));
-console.log(Elements); 
-ulItemEl.appendChild = Elements;
+const liElements = ingredients.map((ingredient) => {
+  const li = document.createElement('li');
+  li.textContent = ingredient;
+  return li;
+})
+ulItemEl.append( ...liElements);
 
 
