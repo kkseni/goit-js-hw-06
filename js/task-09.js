@@ -1,5 +1,5 @@
 
-const button = document.querySelector('.button');
+const button = document.querySelector('.change-color');
 const bodyBackground= document.querySelector('.widget')
 
 function getRandomHexColor() {
@@ -10,9 +10,9 @@ function getRandomHexColor() {
 
 function onChangeColor() {
   let color = getRandomHexColor();
-  bodyBackground.setAttribute('style', `background-color: ${color}`)
+  document.body.style.backgroundColor = color;
 
 }
-
+button.addEventListener('click',onChangeColor)
 
 
