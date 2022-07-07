@@ -1,13 +1,15 @@
 
 const inputEl = document.querySelector('#validation-input');
-const checkNumber = +inputEl.dataset.length;
+
 inputEl.addEventListener('blur', onFocusInput);
 function onFocusInput(event)
 {
-    if (event.currentTarget.value.length === checkNumber) {
+    if (event.currentTarget.value.length === Number(inputEl.dataset.length)) {
         inputEl.classList.remove('invalid');
         return inputEl.classList.add('valid');
     }
     inputEl.classList.remove('valid');
     return inputEl.classList.add('invalid');
 }
+
+
